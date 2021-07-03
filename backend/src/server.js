@@ -19,7 +19,7 @@ io.on('connection', socket => {
 });
 
 mongoose.connect(
-  process.env.MONGOD_URI,
+  process.env.MONGODB_URI,
   { useNewUrlParser: true }
 );
 
