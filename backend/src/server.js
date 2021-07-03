@@ -20,7 +20,10 @@ io.on('connection', socket => {
 
 mongoose.connect(
   process.env.MONGODB_URI,
-  { useNewUrlParser: true }
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
 );
 
 app.use((req, res, next) => {
